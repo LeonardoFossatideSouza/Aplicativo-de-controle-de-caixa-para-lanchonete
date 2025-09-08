@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8"><title>Relatório de Vendas</title>
+    <style>
+        body { font-family: 'Courier New', monospace; width: 280px; margin: 0; padding: 10px; }
+        h1 { text-align: center; font-size: 16px; margin: 5px 0; }
+        p { text-align: center; font-size: 12px; border-bottom: 1px dashed #000; padding-bottom: 5px;}
+        table { width: 100%; font-size: 12px; border-collapse: collapse; margin-top: 10px; }
+        th, td { padding: 2px 0; }
+    </style>
+</head>
+<body>
+    <h1>Relatório - Mais Vendidos</h1>
+    <p>Período: <span id="periodo-relatorio"></span></p>
+    <table>
+        <thead>
+            <tr>
+                <th>Qtd</th>
+                <th>Produto</th>
+            </tr>
+        </thead>
+        <tbody id="corpo-relatorio"></tbody>
+    </table>
+</body>
+<script src="relatorio_vendas.js"></script>
+</html>

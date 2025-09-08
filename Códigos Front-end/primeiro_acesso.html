@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8"><title>Alterar Senha</title>
+    <style> body { font-family: sans-serif; display: flex; justify-content: center; align-items: center; height: 100vh; background-color: #f0f2f5; } .login-box { padding: 40px; background: white; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); text-align: center; } input { display: block; width: 100%; padding: 10px; margin: 10px 0; font-size: 16px; border-radius: 5px; border: 1px solid #ccc; } button { width: 100%; padding: 10px; font-size: 16px; background-color: #28a745; color: white; border: none; border-radius: 5px; cursor: pointer; } #mensagem-erro { color: red; margin-top: 10px; } 
+    #rodape-personalizado {
+            position: fixed; /* Fixa o rodapé na tela */
+            bottom: 0;       /* Alinha na parte inferior */
+            right: 0;        /* Alinha na parte direita */
+            padding: 10px;   /* Um pequeno espaçamento */
+        }
+
+    #rodape-personalizado img {
+            height: 80px; /* Você pode ajustar a altura da sua logo aqui */
+            width: auto;  /* Mantém a proporção da imagem */
+        }
+    </style>
+</head>
+<body>
+    <div class="login-box">
+        <h2>Crie sua Nova Senha</h2>
+        <p>Por segurança, você precisa definir uma nova senha pessoal.</p>
+        <form id="form-nova-senha">
+            <input type="password" id="nova-senha" placeholder="Nova Senha (mín. 6 caracteres)" required>
+            <input type="password" id="confirma-senha" placeholder="Confirme a Nova Senha" required>
+            <button type="submit">Salvar Nova Senha</button>
+        </form>
+        <p id="mensagem-erro"></p>
+    </div>
+    <footer id="rodape-personalizado">
+        <img src="Logo FNS s-f.png" alt="Logo da Empresa">
+    </footer>
+    <script src="primeiro_acesso.js"></script>
+</body>
+</html>

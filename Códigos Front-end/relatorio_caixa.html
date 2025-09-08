@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8"><title>Fechamento de Caixa</title>
+    <style>
+        body { font-family: 'Courier New', monospace; width: 280px; margin: 0; padding: 10px; }
+        h1 { text-align: center; font-size: 16px; margin: 5px 0; border-bottom: 1px dashed #000; padding-bottom: 5px; }
+        p { margin: 5px 0; font-size: 12px; }
+        .linha-total { display: flex; justify-content: space-between; margin: 5px 0; font-size: 12px; }
+        .total-geral { font-weight: bold; font-size: 14px; border-top: 1px dashed #000; padding-top: 5px; margin-top: 10px; }
+        .total-caixa { font-size: 16px; }
+    </style>
+</head>
+<body>
+    <img src="Bangtan Logo.png" alt="Logo" style="display: block; margin: 0 auto; width: 50px;">
+    <h1>Fechamento de Caixa</h1>
+    <p>Data: <span id="data-fechamento"></span></p>
+    <p>Operador: <span id="nome-usuario"></span></p>
+    <hr>
+    
+    <div class="linha-total">
+        <span>(+) CAIXA INICIAL</span>
+        <span id="caixa-inicial">R$ 0.00</span>
+    </div>
+    <hr>
+    
+    <div id="detalhes-pagamentos">
+        </div>
+
+    <div class="linha-total total-geral">
+        <span>TOTAL LÍQUIDO</span>
+        <span id="valor-total-liquido">R$ 0.00</span>
+    </div>
+
+    <div class="linha-total" style="font-size: 10px;">
+        <span>(Total Bruto: <span id="valor-total-bruto">R$ 0.00</span>)</span>
+    </div>
+    <div class="linha-total" style="font-size: 10px; color: red;">
+        <span>(Descontos: -<span id="valor-total-descontos">R$ 0.00</span>)</span>
+    </div>
+    
+    <div class="linha-total total-geral total-caixa">
+        <span>TOTAL EM CAIXA</span>
+        <span id="valor-total-caixa">R$ 0.00</span>
+    </div>
+
+    <script src="relatorio_caixa.js"></script>
+</body>
+</html>

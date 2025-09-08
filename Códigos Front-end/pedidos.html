@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Histórico de Pedidos</title>
+    <style>
+        body { font-family: sans-serif; padding: 20px; }
+        .header { display: flex; justify-content: space-between; align-items: center; }
+        .relatorios button { background-color: #007bff; color: white; }
+        table { width: 100%; border-collapse: collapse; margin-top: 10px; }
+        th, td { padding: 12px; text-align: left; border-bottom: 1px solid #ddd; }
+        tbody tr:hover { background-color: #f5f5f5; cursor: pointer; }
+        /* Estilos do Modal (copiados do index.html) */
+        .modal { display: none; position: fixed; z-index: 1; left: 0; top: 0; width: 100%; height: 100%; overflow: auto; background-color: rgba(0,0,0,0.4); }
+        .modal-content { background-color: #fefefe; margin: 15% auto; padding: 20px; border: 1px solid #888; width: 80%; max-width: 500px; }
+         #rodape-personalizado {
+            position: fixed; /* Fixa o rodapé na tela */
+            bottom: 0;       /* Alinha na parte inferior */
+            right: 0;        /* Alinha na parte direita */
+            padding: 10px;   /* Um pequeno espaçamento */
+        }
+
+        #rodape-personalizado img {
+            height: 80px; /* Você pode ajustar a altura da sua logo aqui */
+            width: auto;  /* Mantém a proporção da imagem */
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Histórico de Pedidos Finalizados</h1>
+        <a href="index.html"><< Voltar ao Painel</a>
+    </div>
+    <hr>
+    <div class="relatorios">
+        <strong>Relatório de Mais Vendidos:</strong>
+        <select id="filtro-periodo">
+            <option value="dia">Hoje</option>
+            <option value="semana">Esta Semana</option>
+            <option value="mes">Este Mês</option>
+        </select>
+        <button id="btn-gerar-relatorio">Gerar e Imprimir</button>
+    </div>
+    <table id="tabela-pedidos">
+    <thead>
+        <tr>
+            <th>Nº Pedido</th>
+            <th>Data</th>
+            <th>Hora</th>
+            <th>Cliente</th>
+            <th>Total Bruto</th>
+            <th>Desconto</th> <th>Total Pago</th> <th>Pagamento</th>
+        </tr>
+    </thead>
+    <tbody id="corpo-tabela-pedidos"></tbody>
+</table>
+
+<div id="pedido-modal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2 id="modal-titulo"></h2>
+        <hr>
+        <h4>Itens do Pedido:</h4>
+        <ul id="modal-lista-itens"></ul>
+        <hr>
+        <p id="modal-subtotal"></p>
+        <p id="modal-desconto" style="color: red;"></p>
+        <h3 id="modal-total-pago"></h3>
+        <p id="modal-pagamento"></p>
+    </div>
+</div>
+    <footer id="rodape-personalizado">
+        <img src="Logo FNS s-f.png" alt="Logo da Empresa">
+    </footer>
+    <script src="pedidos.js"></script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8"><title>Gestão de Funcionários</title>
+    <style> body { font-family: sans-serif; } .container { padding: 20px; max-width: 900px; margin: auto; } .form-cadastro { margin-bottom: 30px; border: 1px solid #ccc; padding: 20px; border-radius: 5px; background-color: #f9f9f9; } input, button { width: 98%; padding: 10px; margin-bottom: 10px; font-size: 16px; } button[type="submit"] { background-color: #007bff; color: white; border: none; cursor: pointer; } 
+     #rodape-personalizado {
+            position: fixed; /* Fixa o rodapé na tela */
+            bottom: 0;       /* Alinha na parte inferior */
+            right: 0;        /* Alinha na parte direita */
+            padding: 10px;   /* Um pequeno espaçamento */
+        }
+
+        #rodape-personalizado img {
+            height: 80px; /* Você pode ajustar a altura da sua logo aqui */
+            width: auto;  /* Mantém a proporção da imagem */
+        }    
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="index.html"><< Voltar ao Painel</a>
+        <h1>Gestão de Funcionários</h1>
+        <div class="form-cadastro">
+            <h3>Cadastrar Novo Funcionário</h3>
+            <form id="form-cadastro-func">
+                <input type="text" id="nome-func" placeholder="Nome Completo" required>
+                <input type="text" id="usuario-func" placeholder="Nome de Usuário (para login)" required>
+                <button type="submit">Cadastrar</button>
+            </form>
+        </div>
+    </div>
+    <footer id="rodape-personalizado">
+        <img src="Logo FNS s-f.png" alt="Logo da Empresa">
+    </footer>
+    <script src="funcionarios.js"></script>
+</body>
+</html>

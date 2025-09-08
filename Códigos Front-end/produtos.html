@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Gestão de Produtos - Bangtan Salgados</title>
+    <style>
+        body { font-family: sans-serif; }
+        .container { padding: 20px; max-width: 900px; margin: auto; }
+        .form-cadastro { margin-bottom: 30px; border: 1px solid #ccc; padding: 20px; border-radius: 5px; background-color: #f9f9f9; }
+        input, textarea, button { width: 98%; padding: 10px; margin-bottom: 10px; font-size: 16px; }
+        button[type="submit"] { background-color: #28a745; color: white; border: none; cursor: pointer; }
+        table { width: 100%; border-collapse: collapse; }
+        th, td { padding: 12px; text-align: left; border-bottom: 1px solid #ddd; }
+        .btn-excluir { color: #dc3545; cursor: pointer; font-weight: bold; }
+         #rodape-personalizado {
+            position: fixed; /* Fixa o rodapé na tela */
+            bottom: 0;       /* Alinha na parte inferior */
+            right: 0;        /* Alinha na parte direita */
+            padding: 10px;   /* Um pequeno espaçamento */
+        }
+
+        #rodape-personalizado img {
+            height: 80px; /* Você pode ajustar a altura da sua logo aqui */
+            width: auto;  /* Mantém a proporção da imagem */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="index.html"><< Voltar para o Painel</a>
+        <h1>Gestão de Produtos</h1>
+        <div class="form-cadastro">
+            <h3>Cadastrar Novo Produto</h3>
+            <form id="form-cadastro">
+                <input type="text" id="nome" placeholder="Nome do Produto (ex: X-Tudo)" required>
+                <textarea id="descricao" placeholder="Descrição (opcional)" rows="3"></textarea>
+                <input type="number" step="0.01" id="preco" placeholder="Preço (ex: 25.50)" required>
+                <input type="text" id="categoria" placeholder="Categoria (ex: Lanche)" required>
+                <button type="submit">Cadastrar Produto</button>
+            </form>
+        </div>
+        <div class="lista-produtos">
+            <h3>Cardápio Atual</h3>
+            <table id="tabela-produtos">
+                <thead>
+                    <tr>
+                        <th>Nome</th>
+                        <th>Preço</th>
+                        <th>Categoria</th>
+                        <th>Ação</th>
+                    </tr>
+                </thead>
+                <tbody id="corpo-tabela-produtos"></tbody>
+            </table>
+        </div>
+    </div>
+    <footer id="rodape-personalizado">
+        <img src="Logo FNS s-f.png" alt="Logo da Empresa">
+    </footer>
+    <script src="produtos.js"></script>
+</body>
+</html>

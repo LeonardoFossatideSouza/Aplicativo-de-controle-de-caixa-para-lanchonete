@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Painel de Gráficos</title>
+<style>
+body { font-family: sans-serif; padding: 20px; }
+.header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; }
+.controls { display: flex; gap: 10px; align-items: center; margin-bottom: 20px; }
+.chart-container { width: 100%; max-width: 600px; margin: 20px auto; }
+.chart-row { display: flex; flex-wrap: wrap; justify-content: space-around; }
+.chart-row .chart-container { flex: 1 1 45%; min-width: 300px; }
+</style>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+<div class="header">
+<h1>Painel de Desempenho</h1>
+<a href="index.html"><< Voltar ao Painel Principal</a>
+</div>
+
+<div class="controls">
+    <strong>Visualizar:</strong>
+    <select id="periodo-vendas">
+        <option value="dia">Hoje</option>
+        <option value="semana">Esta Semana</option>
+        <option value="mes">Este Mês</option>
+    </select>
+    <strong>Data Específica:</strong>
+    <input type="date" id="data-especifica">
+    <button id="btn-atualizar-graficos">Atualizar Gráficos</button>
+</div>
+
+<div class="chart-row">
+    <div class="chart-container">
+        <h2>Vendas por Hora</h2>
+        <canvas id="vendasPorHoraChart"></canvas>
+    </div>
+    <div class="chart-container">
+        <h2>Top 5 Produtos Mais Vendidos</h2>
+        <canvas id="maisVendidosChart"></canvas>
+    </div>
+</div>
+
+<div class="chart-row">
+    <div class="chart-container">
+        <h2>Vendas por Forma de Pagamento</h2>
+        <canvas id="pagamentosChart"></canvas>
+    </div>
+    </div>
+
+<script src="dashboard.js"></script>
+
+</body>
+</html>

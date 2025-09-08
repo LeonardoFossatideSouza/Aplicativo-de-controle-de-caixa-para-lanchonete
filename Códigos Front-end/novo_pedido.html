@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Novo Pedido - Bangtan Salgados</title>
+    <style>
+        body { display: flex; font-family: sans-serif; margin: 0; height: 100vh; }
+        .coluna { flex: 1; padding: 20px; overflow-y: auto; }
+        #cardapio { border-right: 1px solid #ccc; }
+        #pedido-atual { background-color: #f9f9f9; }
+        ul { list-style: none; padding: 0; }
+        .produto { padding: 10px; border-bottom: 1px solid #eee; display: flex; justify-content: space-between; align-items: center; }
+        .produto button { cursor: pointer; padding: 5px 10px; }
+        #botoes-acao { margin-top: 20px; }
+    </style>
+</head>
+<body>
+    <div id="cardapio" class="coluna">
+        <h2>Cardápio</h2>
+        <ul id="lista-produtos">Carregando...</ul>
+    </div>
+    <div id="pedido-atual" class="coluna">
+        <h2 id="titulo-pagina">Novo Pedido</h2>
+        <ul id="lista-itens-pedido"></ul>
+        <hr>
+        <h3>Total: R$ <span id="valor-total">0.00</span></h3>
+        <div id="botoes-acao">
+            <button id="salvar-pedido">Salvar Pedido</button>
+            <a href="index.html">Cancelar</a>
+        </div>
+    </div>
+    <script src="novo_pedido.js"></script>
+</body>
+</html>
